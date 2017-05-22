@@ -10,9 +10,9 @@ html {
 body {
 	counter-reset: heading;
 	font: 12pt "Courier New", Courier, monospace;
-	margin: 0 4em;
+	margin: 0;
 	orphans: 3;
-	text-align: justify;
+	text-align: left;
 }
 
 header h2 {
