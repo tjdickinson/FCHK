@@ -1,14 +1,195 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<script type="text/javascript">
-			const version = "1.0.0"
-		</script>
-		<meta charset="utf-8">
-		<meta name="FCHK README" content="Readme file for FCHK">
-		<title>FontCreator Hotkeys README</title>
-		<link href="readme.css" rel="stylesheet">
-	</head>
+<head>
+<script type="text/javascript">
+const version = "1.0.0"
+</script>
+<meta charset="utf-8">
+<meta name="FCHK README" content="Readme file for FCHK">
+<title>FontCreator Hotkeys README</title>
+<style>
+@page {
+	margin: 0 .5in;
+	size: 21cm 27cm;
+}
+html {
+	width: 100%;
+}
+body {
+	counter-reset: heading;
+	font: 12pt "Courier New", Courier, monospace;
+	margin: 0 4em;
+	orphans: 3;
+	text-align: justify;
+}
+header h2 {
+	font-size: 11pt;
+	margin-bottom: 24pt;
+}
+h1 {
+	font-size: 16pt;
+	font-weight: 100;
+	margin-bottom: 24pt;
+	margin-top: 60pt;
+	text-align: center;
+}
+#byline {
+	font-size: 11pt;
+	font-weight: 100;
+	margin-bottom: 33pt;
+}
+nav {
+	margin-bottom: 150pt;
+	text-transform: uppercase;
+}
+nav h2 {
+	counter-reset: tocheading;
+	font-size: 16pt;
+	font-weight: bold;
+	margin-bottom: 8pt;
+	text-transform: uppercase;
+}
+nav h3 {
+	counter-increment: tocheading;
+	counter-reset: tocsubheading;
+	margin: 10pt 0 5pt 0;
+	position: relative;
+}
+nav h3::before {
+	content: counter(tocheading, upper-roman) ". ";
+	position: absolute;
+	right: calc(100% + .3em);
+}
+nav h4 {
+	counter-increment: tocsubheading;
+	font-size: 14pt;
+	font-weight: normal;
+	margin: 2pt 0;
+	position: relative;
+	text-indent: 18pt;
+}
+nav h4::before {
+	content: counter(tocsubheading) ". ";
+	position: absolute;
+	right: calc(100% - 1.05em);
+}
+nav h5 {
+	counter-increment: tocsubheading;
+	font-size: 14pt;
+	font-weight: normal;
+	margin: 2pt 0;
+	position: relative;
+	text-indent: 18pt;
+}
+nav h5::before {
+	content: counter(tocsubheading) ". ";
+	position: absolute;
+	right: calc(100% - 1.05em);
+}
+h3 {
+	font-size: 16pt;
+	font-weight: bold;
+	margin-bottom: 7pt;
+	page-break-after: avoid;
+	position: relative;
+}
+h4 {
+	font-size: 14pt;
+	font-weight: bold;
+	margin-bottom: 5pt;
+	margin-top: 14pt;
+	page-break-after: avoid;
+}
+h3.heading {
+	counter-increment: heading;
+	counter-reset: subheading category;
+	position: relative;
+	text-transform: uppercase;
+}
+h3.heading::before {
+	content: counter(heading, upper-roman) ". ";
+	min-width : 56pt;
+	position: absolute;
+	left: -60pt;
+	text-align: right;
+}
+h4.subheading {
+	counter-increment: subheading;
+	text-transform: uppercase;
+}
+h4.subheading::before {
+	content: counter(subheading) ". ";
+}
+p {
+	font-size: 12pt;
+	hanging-punctuation: always;
+	margin-bottom: 12pt;
+	margin-top: 0;
+	text-align: justify;
+}
+h5 {
+	font-size: 14pt;
+	font-weight: bold;
+	margin-bottom: 5pt;
+	margin-top: 14pt;
+	page-break-after: avoid;
+}
+h5.category {
+	counter-increment: category;
+	text-transform: uppercase;
+	page-break-after: avoid;
+}
+h5.category::before {
+	content: counter(category) ". ";
+}
+.hotkey {
+	columns: 2;
+	-webkit-columns: 2;
+	column-width: 20em;
+	-webkit-column-width: 20em;
+}
+.nobreak {
+	break-inside: avoid-column;
+	-webkit-column-break-inside: avoid;
+}
+div.hotkey dl {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+div.hotkey {
+	margin-bottom: 1em;
+}
+.hotkey dl dd {
+	text-indent: -15pt;
+}
+ol.license {
+	counter-reset: list;
+}
+ol.license > li {
+	list-style: none;
+	position: relative;
+}
+ol.license > li:before {
+	content: counter(list, lower-alpha) ") ";
+	counter-increment: list;
+	left: -1.4em;
+	position: absolute;
+}
+footer.back {
+	margin-bottom: 24pt;
+	page-break-before: avoid;
+}
+.hotkeylist .back {
+	page-break-before: avoid;
+}
+.hotkeylist {
+	page-break-before: always
+}
+#license {
+	page-break-before: always;
+}
+</style>
+</head>
 <body>
 <section>
 	<header>
@@ -49,6 +230,10 @@
 			<p>To contact the developer directly, <a href="mailto:fchk.tjwd@outlook.com?subject=(FCHK)">send an email</a>. Please do not use email to report bugs, to ask questions, or to suggest improvements; instead, use the GitHub page, so others can benefit from your input.</p>
 			<p>Please do not contact the developer, or post issues on the GitHub repository, regarding FontCreator or AutoHotkey. The developer is not able to provide any assistance with these programs and will only respond to issues regarding FCHK. For help with FontCreator, see the <a href="http://forum.high-logic.com/viewforum.php?f=26">FontCreator Forum</a>; for help with AutoHotkey, see the <a href="https://autohotkey.com/boards/viewforum.php?f=4">AutoHotkey forum</a>.</p>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
+			<h4 class="subheading" id="print">Printing this Documentation</h4>
+			<p>This documentation is currently only designed to be printed on A4 sized paper. If you would like to print this documentation on a different size of paper, it is recommended that you print the file to PDF from your web browser (and choose A4 as your page size), and then print from the PDF to your printer on an alternate page size (such as Letter); this will preserve the margins and layout for easier readability.</p>
+			<p>The internal page structure of this documentation is also designed so you can easily print only the pages containing the list of hotkeys, with no extra clutter.</p>
+			<footer class="back"> <a href="#top">Back to Contents</a></footer>
 		</section>
 		<section>
 			<h3 class="heading" id="howto">How to Use FontCreator Hotkeys</h3>
@@ -99,7 +284,7 @@
 			<p>To run the script, double‑click on FCHK.exe, or right‑click the file and choose &ldquo;Open&rdquo;. The script will immediately start running in the background of the operating system. There is no installation, but a message box should open to indicate the script is running. Neither FontCreator nor the computer need to be restarted. (In fact, restarting the computer stops the script, and the script will need to be re‑executed each time the system boots.)</p>
 			<p>To verify the script is running successfully, a green icon should appear in the system tray. If there is no icon in the tray, check Task Manager to see that FCHK.exe is running.</p>
 			<p>To launch the file automatically when Windows boots:</p>
-			<ol>
+			<ol id="winStart">
 				<li>Go to the&nbsp;.exe file, right‑click on it, and select &ldquo;Copy&rdquo;</li>
 				<li>Navigate to C:\Users\[User]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\</li>
 				<li>Right‑click in the window and choose &ldquo;Paste Shortcut&rdquo;</li>
@@ -121,6 +306,7 @@
 			<p>Under the <a href="#license">Open Source license</a>, users are allowed to modify FCHK. To modify the script, <a href="https://autohotkey.com/download/">AutoHotkey needs to be installed</a>. After installation, navigate to the folder containing the file FCHK.ahk. Right‑click the file and choose &ldquo;Edit Script&rdquo;. (Alternately, choose &ldquo;Open with&hellip;&rdquo; and select &ldquo;Notepad&rdquo;.) Do not double‑click, as this will launch the script.</p>
 			<p>You may wish to modify the hotkeys either to change the hotkey (ex.&nbsp;to press&nbsp;S to activate the Selection tool), or to modify the coordinates for a different screen layout. If you change a hotkey, ensure that it is not also assigned to another function, as this will cause the script to fail. Modifying the coordinates is a more complicated process, involving using a &ldquo;window spy&rdquo; to find the coordinate values. See the <a href="https://autohotkey.com/docs/AutoHotkey.htm">AutoHotkey documentation</a> for help with modifying the script.</p>
 			<p>Please note: remember to send bug reports to the developer before trying to modify or fix them yourself. If you make any modifications, it is recommended that you also save them in a separate&nbsp;.txt file. When FCHK updates are available, you can then copy and paste your customizations into the new code. Otherwise, your changes will be lost when you use a newer release of the script.</p>
+			<p>Also note: if you modify the script, you will have to use FCHK.ahk to launch the script, not the&nbsp;.exe file. Simply double‑click on the file to run it. You can also <a href="#winStart">target a shortcut</a> to the file to automatically run it at startup, just as with the&nbsp;.exe file.</p>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
 			<h4 class="subheading" id="customExtern">Setting Custom External Programs</h4>
 			<p>FontCreator allows the user to choose up to three external programs to be able to launch from within FontCreator. By default, MainType, Windows Fonts, and Windows Character Map are set, and these three cannot be changed. However,the user may add up to three more programs, and FCHK is right there to give you hotkeys to launch your external programs.</p>
@@ -158,7 +344,7 @@
 						<li>Workaround: Use Shift+F10, O, D.</li>
 					</ul>
 				</li>
-				<li>&ldquo;Used by&rdquo; hotkey only works in Contour mode, not in Point mode.
+				<li>&ldquo;Used by&rdquo; hotkey only works in Contour mode, not in Point mode. Conflicts with Type menu in Font Overview.
 					<ul>
 						<li>Workaround: In Point mode, use Shift+F10, U.</li>
 					</ul>
@@ -168,9 +354,19 @@
 						<li>Note: This is an issue within FontCreator, not an issue caused by FCHK.</li>
 					</ul>
 				</li>
+				<li>Remove code points (Ctrl+Backspace) in Font Overview window will trigger Redo if deployed in Contour or Point mode.</li>
+				<li>Shortcuts for caption options will trigger Add Anchor in Contour or Point mode.</li>
+				<li>Arrange hotkeys (bring forward, send backward, send to back, bring to front) conflicts with on‑curve point in Point mode.</li>
+				<li>Add Color Glyph Member (Ctrl+Shift+L) conflicts with Add Point in Point mode and Tag in Contour mode.</li>
+				<li>Colorize to Selected Color (Alt+B) in Font Overview window; conflicts with on‑curve point in Point mode and Order in Contour and Color mode.</li>
+				<li>Smooth and align curves (S) conflicts with Convert in Contour mode.</li>
+				<li>Smooth curves (Shift+S) will target select all in Font Overview window.</li>
+				<li>Extend corner (X) will open the Glyph Edit window if deployed in Font Overview and Change Direction in Contour mode.</li>
+				<li>Split contour (Shift+X) will target Clear Selection in Font Overview window.</li>
+				<li>Glyph Type hotkeys will open Used By window in Contour mode.</li>
 			</ul>
 			<p>To help avoid conflicts, keep FontCreator and FCHK updated regularly. The FCHK developer will do his best to release updates to FCHK as quickly as possible when FontCreator has been updated. However, please be advised that the more complex the FontCreator update is, the more complicated it is to revise the hotkeys, and the longer it may be before an update is released. (For example: FCHK was first developed for FontCreator 10.1, and it took approximately five full days of working to update it for FontCreator 11. When FontCreator 11 was updated to version 11.0.02366, it took approximately two to three days to update FCHK.)</p>
-			<footer class="back"> <a href="#top">Back to Contents</a> </footer>			
+			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
 			<h4 class="subheading" id="planned">Planned Updates</h4>
 			<p>A future update will include hotkeys for each tool window in FontCreator, as well as a full set of hotkeys for the OpenType Developer window. Because of the complexity of these windows, it is a difficult and time‑consuming task to write the scripts for them. At this point, there is no anticipated release date for the update, but it will certainly come.</p>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
@@ -299,15 +495,17 @@
 					<dt>Ctrl+V</dt>
 					<dd>Paste&sup1;</dd>
 					<dt>Ctrl+Shift+V</dt>
-					<dd>Paste special&sup3;</dd>
+					<dd>Paste special&sup3;&sect;</dd>
 					<dt>Del</dt>
 					<dd>Delete&sup1;</dd>
 					<dt>Backspace</dt>
 					<dd>Clear selected glyph&sup1;</dd>
+					<dt>Enter</dt>
+					<dd>Open Glyph Edit window&sup1;&sect;</dd>
 					<dt>Ctrl+Backspace</dt>
-					<dd>Remove code points</dd>
+					<dd>Remove code points&sect;</dd>
 					<dt>Ctrl+Shift+C</dt>
-					<dd>Make simple</dd>
+					<dd>Make simple&sect;</dd>
 					<dt>Ctrl+Del</dt>
 					<dd>Make empty&sup1;</dd>
 					<dt>Ctrl+1</dt>
@@ -321,9 +519,9 @@
 					<dt>Ctrl+5</dt>
 					<dd>Tag selected as &ldquo;Workspace&rdquo;&sup1;</dd>
 					<dt>P</dt>
-					<dd>Load first 255 selected glyphs into preview&sup1;</dd>
+					<dd>Load first 255 selected glyphs into preview&sup1;&sect;</dd>
 					<dt>Shift+P</dt>
-					<dd>Append first 255 selected glyphs to preview&sup1;</dd>
+					<dd>Append first 255 selected glyphs to preview&sup1;&sect;</dd>
 				</dl>
 			</div>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
@@ -333,29 +531,29 @@
 					<dt>Ctrl+A</dt>
 					<dd>Select all&sup1;</dd>
 					<dt>Ctrl+Alt+A</dt>
-					<dd>Select composites</dd>
+					<dd>Select composites&sect;</dd>
 					<dt>Ctrl+T</dt>
 					<dd>Invert selection&sup1;</dd>
 					<dt>Ctrl+U</dt>
 					<dd>Clear selection&sup1;</dd>
-					<dt>Alt+1</dt>
-					<dd>Select all tagged &ldquo;Important&rdquo;</dd>
-					<dt>Alt+2</dt>
-					<dd>Select all tagged &ldquo;Incomplete&rdquo;</dd>
-					<dt>Alt+3</dt>
-					<dd>Select all tagged &ldquo;Completed&rdquo;</dd>
-					<dt>Alt+4</dt>
-					<dd>Select all tagged &ldquo;Review&rdquo;</dd>
-					<dt>Alt+5</dt>
-					<dd>Select all tagged &ldquo;Workspace&rdquo;</dd>
+					<dt>Ctrl+Shift+1</dt>
+					<dd>Select all tagged &ldquo;Important&rdquo;&sect;</dd>
+					<dt>Ctrl+Shift+2</dt>
+					<dd>Select all tagged &ldquo;Incomplete&rdquo;&sect;</dd>
+					<dt>Ctrl+Shift+3</dt>
+					<dd>Select all tagged &ldquo;Completed&rdquo;&sect;</dd>
+					<dt>Ctrl+Shift+4</dt>
+					<dd>Select all tagged &ldquo;Review&rdquo;&sect;</dd>
+					<dt>Ctrl+Shift+5</dt>
+					<dd>Select all tagged &ldquo;Workspace&rdquo;&sect;</dd>
 					<dt>W</dt>
-					<dd>Select next contour/point&sup1;</dd>
+					<dd>Select next contour/point&sup1;&lowast;&dagger;</dd>
 					<dt>Shift+W</dt>
-					<dd>Select next contour/point, including current selection&sup1;</dd>
+					<dd>Select next contour/point, including current selection&sup1;&lowast;&dagger;</dd>
 					<dt>Q</dt>
-					<dd>Select previous contour/point&sup1;</dd>
+					<dd>Select previous contour/point&sup1;&lowast;&dagger;</dd>
 					<dt>Shift+Q</dt>
-					<dd>Select previous contour/point, including current selection&sup1;</dd>
+					<dd>Select previous contour/point, including current selection&sup1;&lowast;&dagger;</dd>
 				</dl>
 			</div>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
@@ -367,21 +565,21 @@
 					<dt>Alt+9</dt>
 					<dd>Display values as dec&sup3;</dd>
 					<dt>H</dt>
-					<dd>Hide all except glyph&sup1;</dd>
+					<dd>Hide all except glyph&sup1;&lowast;&dagger;&Dagger;</dd>
 					<dt>Ctrl+H</dt>
 					<dd>Toggle fill outlines&sup1;</dd>
 					<dt>P</dt>
-					<dd>Toggle point/contour mode&sup1;</dd>
-					<dt>Shift+NumPad1</dt>
-					<dd>Automatic captions</dd>
-					<dt>Shift+NumPad2</dt>
-					<dd>Glyph name captions</dd>
-					<dt>Shift+NumPad3</dt>
-					<dd>Glyph index captions</dd>
-					<dt>Shift+NumPad4</dt>
-					<dd>Codepoint captions</dd>
-					<dt>Shift+NumPad5</dt>
-					<dd>Unicode name captions</dd>
+					<dd>Toggle point/contour mode&sup1;&lowast;&dagger;&Dagger;</dd>
+					<dt>Alt+1</dt>
+					<dd>Automatic captions&sect;</dd>
+					<dt>Alt+2</dt>
+					<dd>Glyph name captions&sect;</dd>
+					<dt>Alt+3</dt>
+					<dd>Glyph index captions&sect;</dd>
+					<dt>Alt+4</dt>
+					<dd>Codepoint captions&sect;</dd>
+					<dt>Alt+5</dt>
+					<dd>Unicode name captions&sect;</dd>
 				</dl>
 			</div>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
@@ -389,9 +587,9 @@
 			<div class="hotkey">
 				<dl>
 					<dt>Z</dt>
-					<dd>Zoom‑in selector tool</dd>
+					<dd>Zoom‑in selector tool&lowast;&dagger;&Dagger;</dd>
 					<dt>Alt+Z</dt>
-					<dd>Zoom to selected</dd>
+					<dd>Zoom to selected&lowast;&dagger;&Dagger;</dd>
 					<dt>+<br>
 						Ctrl+ +</dt>
 					<dd>Increase cell size/zoom in&sup1;</dd>
@@ -427,9 +625,9 @@
 					<dt>Shift+F3</dt>
 					<dd>Find previous&sup1;</dd>
 					<dt>Alt+&thinsp;<span style="vertical-align: 12%; font-size: 125%">&#8592;</span></dt>
-					<dd>Previous glyph&sup1;</dd>
-					<dt>Alt+&thinsp;<span style="vertical-align: 12%; font-size: 125%">&#8593;</span></dt>
-					<dd>Next glyph&sup1;</dd>
+					<dd>Previous glyph&sup1;&lowast;&dagger;&Dagger;</dd>
+					<dt>Alt+&thinsp;<span style="vertical-align: 12%; font-size: 125%">&#8594;</span></dt>
+					<dd>Next glyph&sup1;&lowast;&dagger;&Dagger;</dd>
 				</dl>
 			</div>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
@@ -437,25 +635,27 @@
 			<div class="hotkey">
 				<dl>
 					<dt>G</dt>
-					<dd>Add guideline through selected point&sup1;</dd>
+					<dd>Add guideline through selected point&sup1;&lowast;&dagger;</dd>
 					<dt>Shift+G</dt>
-					<dd>Toggle grid visibility</dd>
+					<dd>Toggle grid visibility&lowast;&dagger;&Dagger;</dd>
 					<dt>Alt+Shift+G</dt>
-					<dd>Toggle snap to grid</dd>
+					<dd>Toggle snap to grid&lowast;&dagger;</dd>
 					<dt>Ctrl+G</dt>
-					<dd>Toggle guideline visiblity</dd>
-					<dt>Ctrl+Shift+G</dt>
-					<dd>Toggle snap to guidelines</dd>
+					<dd>Toggle guideline visiblity&lowast;&dagger;&Dagger;</dd>
+					<dt>Ctrl+Alt+G</dt>
+					<dd>Toggle snap to guidelines&lowast;&dagger;</dd>
 					<dt>Alt+G</dt>
-					<dd>Toggle lock guidelines</dd>
+					<dd>Toggle lock guidelines&lowast;&dagger;&Dagger;</dd>
 					<dt>Alt+A</dt>
-					<dd>Add anchor</dd>
+					<dd>Add anchor&lowast;&dagger;</dd>
 					<dt>Alt+Shift+A</dt>
-					<dd>Toggle anchor visibility</dd>
+					<dd>Toggle anchor visibility&lowast;&dagger;&Dagger;</dd>
 					<dt>Ctrl+Alt+Shift+A</dt>
-					<dd>Toggle loch anchors</dd>
+					<dd>Toggle loch anchors&lowast;&dagger;&Dagger;</dd>
 					<dt>Ctrl+Alt+M</dt>
-					<dd>Toggle metrics visibility</dd>
+					<dd>Toggle metrics visibility&lowast;&dagger;&Dagger;</dd>
+					<dt>Ctrl+Alt+Shift+M</dt>
+					<dd>Toggle lock metrics&lowast;&dagger;&Dagger;</dd>
 				</dl>
 			</div>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
@@ -463,29 +663,29 @@
 			<div class="hotkey">
 				<dl>
 					<dt>PgUp</dt>
-					<dd>Bring forward</dd>
+					<dd>Bring forward&lowast;&Dagger;</dd>
 					<dt>Shift+PgUp</dt>
-					<dd>Bring to front</dd>
+					<dd>Bring to front&lowast;&Dagger;</dd>
 					<dt>PgDn</dt>
-					<dd>Send backward</dd>
+					<dd>Send backward&lowast;&Dagger;</dd>
 					<dt>Shift+PgDn</dt>
-					<dd>Send to back</dd>
+					<dd>Send to back&lowast;&Dagger;</dd>
 					<dt>Alt+L</dt>
-					<dd>Align left</dd>
+					<dd>Align left&lowast;&dagger;</dd>
 					<dt>Alt+E</dt>
-					<dd>Align center</dd>
+					<dd>Align center&lowast;&dagger;</dd>
 					<dt>Alt+R</dt>
-					<dd>Align right</dd>
+					<dd>Align right&lowast;&dagger;</dd>
 					<dt>Alt+T</dt>
-					<dd>Align top</dd>
+					<dd>Align top&lowast;&dagger;</dd>
 					<dt>Alt+M</dt>
-					<dd>Align middle</dd>
+					<dd>Align middle&lowast;&dagger;</dd>
 					<dt>Alt+B</dt>
-					<dd>Align bottom</dd>
+					<dd>Align bottom&lowast;&dagger;</dd>
 					<dt>Alt+H</dt>
-					<dd>Distribute horizontally</dd>
+					<dd>Distribute horizontally&lowast;&dagger;</dd>
 					<dt>Alt+V</dt>
-					<dd>Distribute vertically</dd>
+					<dd>Distribute vertically&lowast;&dagger;</dd>
 				</dl>
 			</div>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
@@ -495,13 +695,13 @@
 					<dt>C</dt>
 					<dd>Toggle standard/color mode&sup1;</dd>
 					<dt>Shift+L</dt>
-					<dd>Colorize</dd>
+					<dd>Colorize&lowast;&dagger;</dd>
 					<dt>Ctrl+Shift+L</dt>
-					<dd>Add color layer</dd>
+					<dd>Add color glyph member&Dagger;</dd>
 					<dt>Alt+Shift+L</dt>
-					<dd>Decolorize</dd>
+					<dd>Decolorize&Dagger;</dd>
 					<dt>Alt+B</dt>
-					<dd>Colorize to selected color</dd>
+					<dd>Colorize to selected color&sect;</dd>
 				</dl>
 			</div>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
@@ -515,15 +715,15 @@
 					<dt>Shift+K</dt>
 					<dd>AutoKern</dd>
 					<dt>O</dt>
-					<dd>Optimize contours</dd>
+					<dd>Optimize contours&lowast;&dagger;</dd>
 					<dt>Alt+D</dt>
-					<dd>Change directions</dd>
+					<dd>Change directions&lowast;</dd>
 					<dt>Ctrl+J</dt>
-					<dd>Join (contour union)</dd>
+					<dd>Join (contour union)&lowast;&dagger;</dd>
 					<dt>Alt+J</dt>
-					<dd>Join (contour intersection)</dd>
+					<dd>Join (contour intersection)&lowast;&dagger;</dd>
 					<dt>Ctrl+Alt+J</dt>
-					<dd>Join (contour exclusion)</dd>
+					<dd>Join (contour exclusion)&lowast;&dagger;</dd>
 					<dt>, (comma)</dt>
 					<dd>Rotate 90&deg; CCW</dd>
 					<dt>. (period)</dt>
@@ -533,15 +733,16 @@
 					<dt>Shift+ .</dt>
 					<dd>Mirror (over y‑axis)</dd>
 					<dt>S</dt>
-					<dd>Smooth and align curves</dd>
+					<dd>Smooth and align curves&dagger;</dd>
 					<dt>Shift+S</dt>
-					<dd>Smooth curves around on‑curve point</dd>
+					<dd>Smooth curves&lowast;&dagger;</dd>
+					<dd>Split self‑intersecting&lowast;</dd>
 					<dt>X</dt>
-					<dd>Extend corner</dd>
+					<dd>Extend corner&dagger;</dd>
 					<dt>Shift+X</dt>
-					<dd>Split corner</dd>
-					<dt>~ (tilde)</dt>
-					<dd>Round xy coordinates</dd>
+					<dd>Split contour&dagger;</dd>
+					<dt>Shift+/</dt>
+					<dd>Round xy coordinates&dagger;</dd>
 					<dt>N</dt>
 					<dd>Change point to on‑curve&sup1;</dd>
 					<dt>F</dt>
@@ -626,18 +827,18 @@
 					<dd>Insert point</dd>
 					<dt>A</dt>
 					<dd>Add point(s) after selected&sup1;</dd>
-					<dt>Shift+1</dt>
-					<dd>Set glyph type to &ldquo;Automatic&rdquo;</dd>
-					<dt>Shift+2</dt>
-					<dd>Set glyph type to &ldquo;Unassigned&rdquo;</dd>
-					<dt>Shift+3</dt>
-					<dd>Set glyph type to &ldquo;Simple&rdquo;</dd>
-					<dt>Shift+4</dt>
-					<dd>Set glyph type to &ldquo;Ligature&rdquo;</dd>
-					<dt>Shift+5</dt>
-					<dd>Set glyph type to &ldquo;Mark&rdquo;</dd>
-					<dt>Shift+6</dt>
-					<dd>Set glyph type to &ldquo;Component&rdquo;</dd>
+					<dt>Ctrl+Alt+1</dt>
+					<dd>Set glyph type to &ldquo;Automatic&rdquo;&sect;</dd>
+					<dt>Ctrl+Alt+2</dt>
+					<dd>Set glyph type to &ldquo;Unassigned&rdquo;&sect;</dd>
+					<dt>Ctrl+Alt+3</dt>
+					<dd>Set glyph type to &ldquo;Simple&rdquo;&sect;</dd>
+					<dt>Ctrl+Alt+4</dt>
+					<dd>Set glyph type to &ldquo;Ligature&rdquo;&sect;</dd>
+					<dt>Ctrl+Alt+5</dt>
+					<dd>Set glyph type to &ldquo;Mark&rdquo;&sect;</dd>
+					<dt>Ctrl+Alt+6</dt>
+					<dd>Set glyph type to &ldquo;Component&rdquo;&sect;</dd>
 				</dl>
 			</div>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
@@ -854,12 +1055,12 @@
 				<p>If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Program, unless a warranty or assumption of liability accompanies a copy of the Program in return for a fee.</p>
 				<p>END OF TERMS AND CONDITIONS</p>
 			</footer>
-				<footer class="back"> <a href="#top">Back to Contents</a> </footer>
+			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
 		</section>
 	</article>
 </main>
 <script type="text/javascript">
-		const versionElements = Array.prototype.slice.call(document.querySelectorAll(".version"))
+const versionElements = Array.prototype.slice.call(document.querySelectorAll(".version"))
 for (let element of versionElements) {
 element.textContent = version
 }
@@ -886,6 +1087,6 @@ entry.appendChild(anchor)
 toc.appendChild(entry)
 }
 
-	</script>
+</script>
 </body>
 </html>
