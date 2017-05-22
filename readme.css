@@ -166,6 +166,11 @@ h5.category::before {
 
 div.hotkey dl {
 	margin-top: 0;
+	margin-bottom: 0;
+}
+
+div.hotkey {
+	margin-bottom: 1em;
 }
 .hotkey dl dd {
 	text-indent: -15pt;
