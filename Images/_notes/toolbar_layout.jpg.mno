@@ -3,30 +3,30 @@
 	<infoitem key="FileFormatType" value="JPG" />
 	<infoitem key="MacCreator" value="0" />
 	<infoitem key="MacFileType" value="0" />
-	<infoitem key="ColorMode" value="IndexedColor" />
+	<infoitem key="ColorMode" value="24bitColor" />
 	<infoitem key="CropBottom" value="0" />
 	<infoitem key="CropLeft" value="0" />
 	<infoitem key="CropRight" value="0" />
 	<infoitem key="CropTop" value="0" />
 	<infoitem key="Crop" value="false" />
-	<infoitem key="Constrain" value="true" />
+	<infoitem key="Constrain" value="false" />
 	<infoitem key="DitherMode" value="NoDither" />
 	<infoitem key="DitherPercent" value="100" />
-	<infoitem key="Interlaced" value="0" />
-	<infoitem key="JpegQuality" value="80" />
-	<infoitem key="JpegSmoothness" value="0" />
+	<infoitem key="Interlaced" value="1" />
+	<infoitem key="JpegQuality" value="75" />
+	<infoitem key="JpegSmoothness" value="2" />
 	<infoitem key="JpegSubsampling" value="0" />
 	<infoitem key="LocalAdaptive" value="1" />
 	<infoitem key="LossyGifAmount" value="0" />
-	<infoitem key="ProgressiveJPEG" value="0" />
+	<infoitem key="ProgressiveJPEG" value="1" />
 	<infoitem key="TransparencyIndex" value="0" />
 	<infoitem key="UseScale" value="false" />
 	<infoitem key="PercentScale" value="100" />
 	<infoitem key="ApplyScale" value="false" />
-	<infoitem key="XSize" value="0" />
-	<infoitem key="YSize" value="0" />
+	<infoitem key="XSize" value="1250" />
+	<infoitem key="YSize" value="108" />
 	<infoitem key="NumCustomEntries" value="0" />
-	<infoitem key="NumEntriesRequested" value="256" />
+	<infoitem key="NumEntriesRequested" value="128" />
 	<infoitem key="NumGridEntries" value="6" />
 	<infoitem key="Optimized" value="0" />
 	<infoitem key="PaletteEntry0" value="4294967295" />
@@ -286,14 +286,14 @@
 	<infoitem key="PaletteEntry254" value="4294967295" />
 	<infoitem key="PaletteEntry255" value="4294967295" />
 	<infoitem key="PaletteMode" value="Adaptive" />
-	<infoitem key="PaletteTransparency" value="Alpha" />
+	<infoitem key="PaletteTransparency" value="None" />
 	<infoitem key="PaletteSorting" value="None" />
 	<infoitem key="WebSnapAdaptive" value="false" />
-	<infoitem key="WebSnapTolerance" value="14" />
-	<infoitem key="VersionOfOptions" value="2" />
+	<infoitem key="WebSnapTolerance" value="0" />
+	<infoitem key="VersionOfOptions" value="0" />
 	<infoitem key="FilePathSrc" value="/Images/toolbar_layout.psd" />
 	<infoitem key="UseMatte" value="false" />
-	<infoitem key="MatteColor" value="4294967295" />
+	<infoitem key="MatteColor" value="0" />
 	<infoitem key="completeRepresentationOfOriginal" value="true" />
-	<infoitem key="smartObjectLastSyncDateTime" value="20170522102516" />
+	<infoitem key="smartObjectLastSyncDateTime" value="20170522110601" />
 </info>

@@ -9,16 +9,6 @@
 		<title>FontCreator Hotkeys README</title>
 		<link href="readme.css" rel="stylesheet">
 	</head>
-	<body>
-<head>
-	<script type="text/javascript">
-		const version = "1.0.0"
-	</script>
-	<meta charset="utf-8">
-	<meta name="FCHK README" content="Readme file for FCHK">
-	<title>FontCreator Hotkeys README</title>
-	<link href="readme.css" rel="stylesheet">
-</head>
 <body>
 <section>
 	<header>
@@ -66,7 +56,7 @@
 			<p>Because the current version of FontCreator does not include every tool in the main menu, some shortcuts are mapped to precise coordinates within the window. In other words, typing the hotkey tells the mouse to move to a certain place on the screen, to click in that location, and then to return to its starting position. For the script to work properly, therefore, it is necessary that your FontCreator window has the layout FCHK needs. Otherwise, there is no way for the mouse to find the correct button.</p>
 			<p>Understandably, this may be inconvenient for some users. You are welcome to <a href="#mod">make changes</a> to the script, but remain aware of compatibility issues and updates. The developer is not able to resolve bugs or issues caused by modifications to the script.</p>
 			<p style="page-break-after: avoid;">The window layout should be arranged as follows:</p>
-			<img src="Images/FC_toolbar_layout.jpg" width="2500" height="200" alt="FontCreator toolbar layout">
+			<img src="Images/toolbar_layout.jpg" width="1250" height="108" alt="FontCreator toolbar layout">
 			<ol>
 				<li>The main menu bar (File, Edit, View&hellip;), highlighted yellow in the image, must be at the top of the screen.</li>
 				<li>The standard toolbar (New Document, Open, Save, Print&hellip;), highlighted orange, must be directly underneath the menu bar, aligned to the left of the window.</li>
@@ -78,17 +68,43 @@
 			<p>This top area of the screen is absolute, and FCHK will not function correctly if it is not laid out as described. Other toolbars and windows may be open and docked below these toolbars, or to the right, left, or bottom of the screen, provided that the layout, button size, and visibility of the top‑frame toolbars is not changed or impeded or obscured.</p>
 			<p>Currently, no hotkeys are designed to work in the tool windows, but a future update will incorporate this feature. Some shortcuts, but not many, are already available by default for some FontCreator tool windows (such as the OpenType Designer), and these hotkeys will continue to function.</p>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
+			<h4 class="subheading" id="accessKeys">Enabling Access Keys</h4>
+			<p>For the script to work properly, access keys must also be enabled on your system. Access keys are the small underline you can see in menus and on windows, indicating a key to press to access that function. Sometimes, the keys are only visible when you press Alt. If access keys are not currently enabled on your system, or if you don&rsquo;t know if they are enabled, follow these steps:</p>
+			<ol>
+				<li>Navigate to the Ease of Access settings on your operating system
+					<ul>
+						<li>Press Win+U, or</li>
+						<li>Go to the control panel and click on &ldquo;Ease of Access Center&rdquo;</li>
+					</ul>
+				</li>
+				<li>On Windows 10:
+					<ul>
+						<li>Click on Keyboard in the left panel</li>
+						<li>Scroll down to &ldquo;Other Settings&rdquo;</li>
+						<li>Turn on &ldquo;Enable Shortcut Underlines&rdquo;</li>
+					</ul>
+				</li>
+				<li>Or, from the Control Panel (older versions of Windows):
+					<ul>
+						<li>Scroll down to and click on &ldquo;Make the keyboard easier to use&rdquo;</li>
+						<li>Scroll down to &ldquo;Make it easier to use keyboard shortcuts&rdquo;</li>
+						<li>Check &ldquo;Underline keyboard shortcuts&rdquo;</li>
+					</ul>
+				</li>
+			</ol>
+			<p>If the access keys are not turned on, FCHK may not be able to access many menu items assigned to the hotkeys.</p>
+			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
 			<h4 class="subheading" id="run">Running the Script</h4>
-			<p>To use FCHK, download FCHK-<span class="version">0.0.0</span>.zip from GitHub. In it, you will find three files: FCHK_<span class="version">0.0.0</span>.exe, FCHK_<span class="version">0.0.0</span>.ahk, and this README.html. After downloading, unzip the files to a safe and memorable location (such as C:\Users\[User]\FCHK\ or C:\Users\[User]\Desktop\FCHK\). Note that you do not need an internet connection to access this documentation file after it is saved to your computer.</p>
-			<p>To run the script, double‑click on FCHK_<span class="version">0.0.0</span>.exe, or right‑click the file and choose &ldquo;Open&rdquo;. The script will immediately start running in the background of the operating system. There is no installation, but a message box should open to indicate the script is running. Neither FontCreator nor the computer need to be restarted. (In fact, restarting the computer stops the script, and the script will need to be re‑executed each time the system boots.)</p>
-			<p>To verify the script is running successfully, a green icon should appear in the system tray. If there is no icon in the tray, check Task Manager to see that FCHK_<span class="version">0.0.0</span>.exe is running.</p>
+			<p>To use FCHK, download FCHK.zip from GitHub. In it, you will find three files: FCHK.exe, FCHK.ahk, and this README.html. After downloading, unzip the files to a safe and memorable location (such as C:\Users\[User]\FCHK\ or C:\Users\[User]\Desktop\FCHK\). Note that you do not need an internet connection to access this documentation file after it is saved to your computer.</p>
+			<p>To run the script, double‑click on FCHK.exe, or right‑click the file and choose &ldquo;Open&rdquo;. The script will immediately start running in the background of the operating system. There is no installation, but a message box should open to indicate the script is running. Neither FontCreator nor the computer need to be restarted. (In fact, restarting the computer stops the script, and the script will need to be re‑executed each time the system boots.)</p>
+			<p>To verify the script is running successfully, a green icon should appear in the system tray. If there is no icon in the tray, check Task Manager to see that FCHK.exe is running.</p>
 			<p>To launch the file automatically when Windows boots:</p>
 			<ol>
 				<li>Go to the&nbsp;.exe file, right‑click on it, and select &ldquo;Copy&rdquo;</li>
 				<li>Navigate to C:\Users\[User]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\</li>
 				<li>Right‑click in the window and choose &ldquo;Paste Shortcut&rdquo;</li>
 			</ol>
-			<p>Note that changing the location or name of the&nbsp;.exe file will create an error in the shortcut destination. To resolve this issue, simply rename the&nbsp;.exe file as &ldquo;FCHK.exe&rdquo; before creating the shortcut. Then, whenever you update FCHK, give it the same name (and delete the old file). If you change the location of the&nbsp;.exe file, then you will have to recreate or remap the shortcut accordingly.</p>
+			<p>Note that changing the location or name of the&nbsp;.exe file will create an error in the shortcut destination. If you change the location of the&nbsp;.exe file, then you will have to recreate or remap the shortcut accordingly.</p>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
 			<h4 class="subheading" id="interface">Interface Note</h4>
 			<p>While using FCHK, you might notice your mouse jumping around the screen. This is normal behavior and not anything to be concerned about. <a href="#fclayout">As previously mentioned</a>, some of the hotkeys need to simulate mouse clicks. For example, when pressing Shift+D (Free Draw Contour tool), the script tells the mouse to move to certain coordinates on the screen (over the button for the Free Draw Contour tool). Although this movement happens instantaneously, for a brief moment, you might see your mouse arrow move to the button. FCHK is programmed to return the mouse cursor to the same position it started in, so you never lose track of your pointer.</p>
@@ -102,9 +118,19 @@
 			<p>To remove the script, simply delete the file either by selecting it and pressing &ldquo;Delete&rdquo; on the keyboard, or by dragging and dropping it into the Recycle Bin. Since it is not a program, it does not need to (and, in fact, cannot) be uninstalled, and it cannot be found in the list of installed applications on the system. Note that deleting the file completely removes it from your system, and you will need to download it again from the GitHub repository.</p>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
 			<h4 class="subheading" id="mod">Modifying the Script</h4>
-			<p>Under the <a href="#license">Open Source license</a>, users are allowed to modify FCHK. To modify the script, <a href="https://autohotkey.com/download/">AutoHotkey needs to be installed</a>. After installation, navigate to the folder containing the file FCHK_<span class="version">x.x.x</span>.ahk. Right‑click the file and choose &ldquo;Edit Script&rdquo;. (Alternately, choose &ldquo;Open with&hellip;&rdquo; and select &ldquo;Notepad&rdquo;.) Do not double‑click, as this will launch the script.</p>
+			<p>Under the <a href="#license">Open Source license</a>, users are allowed to modify FCHK. To modify the script, <a href="https://autohotkey.com/download/">AutoHotkey needs to be installed</a>. After installation, navigate to the folder containing the file FCHK.ahk. Right‑click the file and choose &ldquo;Edit Script&rdquo;. (Alternately, choose &ldquo;Open with&hellip;&rdquo; and select &ldquo;Notepad&rdquo;.) Do not double‑click, as this will launch the script.</p>
 			<p>You may wish to modify the hotkeys either to change the hotkey (ex.&nbsp;to press&nbsp;S to activate the Selection tool), or to modify the coordinates for a different screen layout. If you change a hotkey, ensure that it is not also assigned to another function, as this will cause the script to fail. Modifying the coordinates is a more complicated process, involving using a &ldquo;window spy&rdquo; to find the coordinate values. See the <a href="https://autohotkey.com/docs/AutoHotkey.htm">AutoHotkey documentation</a> for help with modifying the script.</p>
 			<p>Please note: remember to send bug reports to the developer before trying to modify or fix them yourself. If you make any modifications, it is recommended that you also save them in a separate&nbsp;.txt file. When FCHK updates are available, you can then copy and paste your customizations into the new code. Otherwise, your changes will be lost when you use a newer release of the script.</p>
+			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
+			<h4 class="subheading" id="customExtern">Setting Custom External Programs</h4>
+			<p>FontCreator allows the user to choose up to three external programs to be able to launch from within FontCreator. By default, MainType, Windows Fonts, and Windows Character Map are set, and these three cannot be changed. However,the user may add up to three more programs, and FCHK is right there to give you hotkeys to launch your external programs.</p>
+			<p>To take advantage of this feature, first set up the external programs within FontCreator.</p>
+			<ol>
+				<li>Navigate to the &ldquo;Tools&rdquo; menu at the top of the screen, and from the &ldquo;Launch Externals&rdquo; flyout, click on &ldquo;Configure Externals&rdquo;.</li>
+				<li>Click the folder icon next to one of the three locations boxes, and navigate to the&nbsp;.exe file of your choice, and then select &ldquo;Open&rdquo;.</li>
+				<li>In the corresponding title box, type in the name of the program (if it is not automatically filled).</li>
+				<li>Place an &amp; before any letter in the title. IMPORTANT: Each letter has to be unique, and you can&rsquo;t use M, F, or C, as those are already assigned to the default options.</li>
+			</ol>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
 		</section>
 		<section>
@@ -113,6 +139,30 @@
 			<p>FCHK will not update automatically. You will need to manually download and &ldquo;install&rdquo; (i.e.&nbsp;save to your computer) the updated files. To be notified when updates are available, <a href="https://github.com/tjdickinson/FCHK/subscription">click here</a> and choose &ldquo;Watch&rdquo;. Then go to <a href="https://github.com/settings/notifications">your notification settings</a> and ensure &ldquo;Watching&gt;&gt;Email&rdquo; and &ldquo;Pull Request pushes&rdquo; are checked. (The other boxes can be checked or unchecked according to your preference.) Then you will receive an email whenever a new version is uploaded to GitHub.</p>
 			<p>To get the update, simply download the new&nbsp;.zip folder as you did when you first downloaded FCHK, and extract the files to the same location (ex.&nbsp;C:\Users\[User]\FCHK\). Overwrite any duplicate files and delete any old files. If you created a shortcut to run FCHK at windows startup, rename the new&nbsp;.exe file to match the shortcut target, or update the shortcut to target the new&nbsp;.exe file.</p>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
+			<h4 class="subheading" id="issues">Known Issues</h4>
+			<p>Unfortunately, for many reasons, there are some already known and unavoidable issues. Perhaps the most glaring issue is that some functions are only available in certain modes (ex. only in Color mode, or only in the Font Overview window), and the access keys used to map hotkeys to functions are reused in different modes.</p>
+			<p>For example, pressing Alt+U in Contour mode opens the &ldquo;Used by&rdquo; window. To do this, the script actually tells the computer to open the context menu and type Y, which is the access key for &ldquo;Used by&rdquo;. However, in Point mode, the access key is U, and in the Font Overview window, the access key Y is mapped to &ldquo;Type&rdquo; in the context menu.</p>
+			<p>Currently, the only possible workaround is to just ensure you are in the correct view mode when using a hotkey. See the notes in the <a href="#list">List of Hotkeys</a> for more information.</p>
+			<p>Other known issues:</p>
+			<ul>
+				<li>Unable to access &ldquo;Decolorize&rdquo; from Font Overview window.
+					<ul>
+						<li>Workaround: Use Shift+F10, O, D.</li>
+					</ul>
+				</li>
+				<li>&ldquo;Used by&rdquo; hotkey only works in Contour mode, not in Point mode.
+					<ul>
+						<li>Workaround: In Point mode, use Shift+F10, U.</li>
+					</ul>
+				</li>
+				<li>Ctrl+Tab does not navigate open tabs in the order displayed, but rather in the order they are clicked, opened, or most recently used.
+					<ul>
+						<li>Note: This is an issue within FontCreator, not an issue caused by FCHK.</li>
+					</ul>
+				</li>
+			</ul>
+			<p>To help avoid conflicts, keep FontCreator and FCHK updated regularly. The FCHK developer will do his best to release updates to FCHK as quickly as possible when FontCreator has been updated. However, please be advised that the more complex the FontCreator update is, the more complicated it is to revise the hotkeys, and the longer it may be before an update is released. (For example: FCHK was first developed for FontCreator 10.1, and it took approximately five full days of working to update it for FontCreator 11. When FontCreator 11 was updated to version 11.0.02366, it took approximately two to three days to update FCHK.)</p>
+			<footer class="back"> <a href="#top">Back to Contents</a> </footer>			
 			<h4 class="subheading" id="planned">Planned Updates</h4>
 			<p>A future update will include hotkeys for each tool window in FontCreator, as well as a full set of hotkeys for the OpenType Developer window. Because of the complexity of these windows, it is a difficult and time‑consuming task to write the scripts for them. At this point, there is no anticipated release date for the update, but it will certainly come.</p>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
@@ -127,6 +177,9 @@
 			<h3 class="heading" id="list">List of Hotkeys</h3>
 			<p>Notes: Default hotkeys (those preset in FontCreator) are marked with&nbsp;&sup1;. Hotkeys which have been redefined (i.e.&nbsp;the given hotkey has a different default function in FontCreator) are marked with&nbsp;&sup2;. Hotkeys which are reassigned (i.e.&nbsp;the given function has a different default hotkey in FontCreator) are marked with&nbsp;&sup3;.</p>
 			<p>For example: In FontCreator, Ctrl+Shift+S is the <em>default</em> hotkey for &ldquo;Save all&rdquo;. However, in FCHK, Ctrl+Shift+S has been <em>redefined</em> as &ldquo;Save as&rdquo;. The function &ldquo;Save all&rdquo; has been <em>reassigned</em> to the hotkey Ctrl+Alt+S.</p>
+			<p>As mentioned in the <a href="#issues">Known Issues</a>, some hotkeys are only accessible or only work correctly in certain modes. Most hotkeys are available globally, meaning that they function in the Font Overview window and in the Glyph Edit window, whether in Contour, Point, or Color mode. Other hotkeys are context specific, and may cause unexpected results if used outside their proper contexts.</p>
+			<p>To help you work most efficiently with FCHK, the hotkey list is marked with the following notation:</p>
+			<p>Hotkeys accessible in Contour mode are marked with&nbsp;&lowast;. Hotkeys accessible in Point mode are marked with&nbsp;&dagger;. Hotkeys accessible in Color mode are makred with&nbsp;&Dagger;. Hotkeys accessible only in the Font Overview window are marked with&nbsp;&sect;. Hotkeys without any corresponding notation are globally accessible.</p>
 			<h5 class="category" id="file">File</h5>
 			<div class="hotkey">
 				<dl>
@@ -153,11 +206,15 @@
 					<dt>Ctrl+Y</dt>
 					<dd>Repeat&sup2;</dd>
 					<dt>Alt+U</dt>
-					<dd>Used by</dd>
+					<dd>Used by&lowast;</dd>
 					<dt>F10</dt>
 					<dd>Activate main menu&sup1;</dd>
 					<dt>Shift+F10</dt>
 					<dd>Activate context menu&sup1;</dd>
+					<dt>Shift+F1</dt>
+					<dd>Open FontCreator manual</dd>
+					<dt>Ctrl+F1</dt>
+					<dd>Check for updates</dd>
 				</dl>
 			</div>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
@@ -214,8 +271,15 @@
 					<dd>Launch Windows font folder&sup1;</dd>
 					<dt>Ctrl+F12</dt>
 					<dd>Launch Windows character map&sup1;</dd>
+					<dt>Ctrl+Shift+F10</dt>
+					<dd>Custom external program 1</dd>
+					<dt>Ctrl+Shift+F11</dt>
+					<dd>Custom external program 2</dd>
+					<dt>Ctrl+Shift+F12</dt>
+					<dd>Custom external program 3</dd>
 				</dl>
 			</div>
+			<footer class="modify"> <a href="#customExtern">Setting Custom External Programs</a> </footer>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
 			<h5 class="category" id="edit">Edit</h5>
 			<div class="hotkey">
@@ -786,7 +850,7 @@
 		</section>
 	</article>
 </main>
-	<script type="text/javascript">
+<script type="text/javascript">
 		const versionElements = Array.prototype.slice.call(document.querySelectorAll(".version"))
 for (let element of versionElements) {
 element.textContent = version
