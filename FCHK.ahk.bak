@@ -32,13 +32,13 @@ D. If you make any changes or add new hotkeys, ALWAYS copy and paste your chang
 ;{ ADD NEW HOTKEYS HERE, AND CUSTOMIZE YOUR EXTERNAL APPLICATIONS HOTKEYS (see documentation)
 ; External applications
 ^+F10::
-	Send {F10}lx
+	Send 
 return
 ^+F11::
-	Send {F10}lx
+	Send 
 return
 ^+F12::
-	Send {F10}lx
+	Send 
 return
 
 ; Other custom hotkeys

@@ -10,9 +10,9 @@ html {
 body {
 	counter-reset: heading;
 	font: 12pt "Courier New", Courier, monospace;
-	margin: 0;
+	margin: 0 4em;
 	orphans: 3;
-	text-align: left;
+	text-align: justify;
 }
 
 header h2 {
@@ -167,6 +167,10 @@ h5.category::before {
 div.hotkey dl {
 	margin-top: 0;
 }
+.hotkey dl dd {
+	text-indent: -15pt;
+}
+
 
 ol.license {
     counter-reset: list;
@@ -186,12 +190,10 @@ ol.license > li:before {
 
 footer.back {
 	margin-bottom: 24pt;
-	margin-top: -7pt;
 	page-break-before: avoid;
 }
 
 .hotkeylist .back {
-	margin-top: 10pt;
 	page-break-before: avoid;
 }
 

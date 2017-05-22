@@ -129,8 +129,16 @@
 				<li>Navigate to the &ldquo;Tools&rdquo; menu at the top of the screen, and from the &ldquo;Launch Externals&rdquo; flyout, click on &ldquo;Configure Externals&rdquo;.</li>
 				<li>Click the folder icon next to one of the three locations boxes, and navigate to the&nbsp;.exe file of your choice, and then select &ldquo;Open&rdquo;.</li>
 				<li>In the corresponding title box, type in the name of the program (if it is not automatically filled).</li>
-				<li>Place an &amp; before any letter in the title. IMPORTANT: Each letter has to be unique, and you can&rsquo;t use M, F, or C, as those are already assigned to the default options.</li>
+				<li>Place an &amp; before any character in the title; the letter after the &amp; becomes the access key. IMPORTANT: Each access key has to be unique. Do not use M, F, or C, as those are already assigned to the default options.</li>
+				<li>Make a note of your access key(s) so you don't forget.</li>
 			</ol>
+			<p>Then, navigate to FCHK.ahk, right‑click it, and choose &ldquo;Edit Script&rdquo; (or &ldquo;Open with&hellip;&rdquo; and choose &ldquo;Notepad&rdquo;). At the top of the file is a predesignated area for adding your own hotkeys. Three keys are already prepared in this section, but they need more information for their function to be carried out.</p>
+			<p>The first line of each sequence defines the hotkey; in this case, it is Ctrl+Shift+F10 or F11 or F12. The second line of the function tells the computer what to do when the hotkey is pressed. The sequence tells the script to &ldquo;Send&rdquo; a key sequence, namely: F10, which opens the main menu, then L, which targets the Tools menu, and X, which flies open the Launch Externals panel. The only thing left is to define which item in that panel will be targeted by which hotkey.</p>
+			<p>Next to the x in the Send command, type in the access key for one of your external programs. It might look something like:</p>
+			<blockquote>
+				<p>Send {F10}lxi</p>
+			</blockquote>
+			<p>Now copy the whole section, and paste it into a new .txt (Notepad) file. Save the new file with whatever name you like, such as my_hotkeys.txt. Keep this file together with your FCHK script so you can easily access them again </p>
 			<footer class="back"> <a href="#top">Back to Contents</a> </footer>
 		</section>
 		<section>
