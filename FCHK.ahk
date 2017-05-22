@@ -1,12 +1,12 @@
 ﻿/* INFORMATION
-FontCreator Hotkeys v.0.5.0 -- Keyboard shortcuts for FontCreator 11 Professional.
-Copyright © 2017 Tyler Dickinson. Last modified 20/05/2017.
+FontCreator Hotkeys v.1.0.0 -- Keyboard shortcuts for FontCreator 11 Professional.
+Copyright © 2017 Tyler Dickinson. Last modified 22/05/2017.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License in the README file for more details.
 
-For questions, bug reports, comments, etc., submit an issue on GitHub: .
+For questions, bug reports, comments, etc., submit an issue on GitHub. See documentation for more information.
 */
 
 ; BEGIN SCRIPT
@@ -34,12 +34,15 @@ D. If you make any changes or add new hotkeys, ALWAYS copy and paste your chang
 ^+F10::
 	Send {F10}lx
 return
+
 ^+F11::
 	Send {F10}lx
 return
+
 ^+F12::
 	Send {F10}lx
 return
+
 
 ; Other custom hotkeys
 
